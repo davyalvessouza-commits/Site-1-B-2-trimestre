@@ -1,52 +1,73 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-        cons botao = document.querySelector("button");
-        botao.addEvenlistener("click",botaoClicado );
     <head>
-        <meta charset="UFT-8">
-        <meta name="viewport" content="widtg=device-widt, initial-scale=1.0">
-        <title>Blog</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Meu blog</title>
         <style>
             header{
-                background-color: green;
-                color: black;
+                background-color: rgb(12, 5, 54);
+                color: azure;
                 text-align: center;
                 max-width: 800px;
                 margin: 0 auto;
-                border: 5px solid rgb(, green, blue);
+                border: 5px solid red;
                 padding: 16px;
-
             }
             main{
                 background-color: aliceblue;
-                color: black;
+                color: blue;
                 text-align: center;
                 max-width: 800px;
                 margin: 0 auto;
-                border: 5px solid rgb(red, green, blue);
+                border: 5px solid red;
                 padding: 16px;
+                display: flex;
             }
+            img{
+                    width: 80px;
+                    height: 80px;
+           
+            }
+
+            .artigo-autor {
+                font-weight: bold;
+            }
+
         </style>
     </head>
     <body>
         <header>
-            <h1>Por que entrar nesse site?</h1>
-            <p>Oque voce esta procurando?</p>
-         /header>
-        <main><img src="https://media1.tenor.com/m/l4xBa9ONC3UAAAAd/67-6.gif" alt="">
-        <div>
-        <h2>Ze da manga</h2>
-    <p>Sai logo man</p>
-    <button>​🗿​<span>0</span></button>
-</main>
+            <h1>Clube de Ciências Paulo Sergio Bretones.</h1>
+            <p> Venha se apaixonar pela Astronomia.</p>
+        </header>
+
+        <main>
+           
+            <img src="imagem-blog.png" alt="Três jovens do clube de ciências observam o céu noturno estrelado ao lado de um telescópio. No topo da imagem, lê-se o título Clube de Ciências: Astronomia">
+            <div>
+                <h2>Meu primeiro post</h2>
+                <p>Sejam bem vindos ao Clube de Ciências do Colégio Branca da Mota Fernandes. Aqui irei compartilhar os trabalhos dos alunos que participam dos encontros.</p>
+                <p class="artigo-autor">Por: Flávia Henrique</p>
+                <button>❤️ <span>0</span></button>
+                <button>💥​<span>0</span></button>
+            </div>
+        <main>
+       
 </body>
-</Script>
-const botao = document.querySelector("button");
-botao.addEventListener("click", botaoClicado);
-function botaoClicado() {
-console.log("fui clicado");
-let texto = botao.querySelector("spam");
-texto.textContent++;
-}
-<Script>
+<script>
+  const botoes = document.querySelectorAll("main button");
+   botoes.forEach(function (botao) {
+        botao.addEventListener("click", botaoClicado);
+
+        function botaoClicado() {
+            console.log("fui clicado");
+            let texto = botao.querySelector("span");
+            texto.textContent++;
+        }
+    });
+   
+</script>
+
+
 </html>

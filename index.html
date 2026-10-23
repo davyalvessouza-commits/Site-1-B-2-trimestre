@@ -1,73 +1,83 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Meu blog</title>
-        <style>
-            header{
-                background-color: rgb(11, 11, 11);
-                color: rgb(250, 251, 253);
-                text-align: center;
-                max-width: 800px;
-                margin: 0 auto;
-                border: 5px solid rgb(46, 45, 45);
-                padding: 16px;
-            }
-            main{
-                background-color: rgb(5, 0, 5);
-                color: rgb(249, 246, 249);
-                text-align: center;
-                max-width: 800px;
-                margin: 0 auto;
-                border: 5px solid rgb(46, 45, 45);
-                padding: 16px;
-                display: flex;
-            }
-            img{
-                    width: 80px;
-                    height: 80px;
-           
-            }
-
-            .artigo-autor {
-                font-weight: bold;
-            }
-
-        </style>
-    </head>
-    <body>
-        <header>
-            <h1>tumbalacatubatumbata.</h1>
-            <p> venha comprar puro voodo.</p>
-        </header>
-
-        <main>
-           
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYPi3mHFemY8dVO_SGcfXBuD6S4xcKenUVUuNI59-auRCmLQGVg5eLjOvM&s=10"alt="ala, ta caçando oq">
-            <div>
-                <h2>ain ze da manga</h2>
-                <p>sei la.</p>
-                <p class="artigo-autor">Por: sixsevensito</p>
-                <button>6️⃣ <span>0</span></button>
-                <button>7️⃣​<span>0</span></button>
-            </div>
-        <main>
-       
-</body>
-<script>
-  const botoes = document.querySelectorAll("main button");
-   botoes.forEach(function (botao) {
-        botao.addEventListener("click", botaoClicado);
-
-        function botaoClicado() {
-            console.log("fui clicado");
-            let texto = botao.querySelector("span");
-            texto.textContent++;
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu blog</title>
+    <style>
+        header {
+            background-color: rgb(11, 11, 11);
+            color: rgb(250, 251, 253);
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 20px auto;
+            border: 5px solid rgb(46, 45, 45);
+            padding: 16px;
         }
-    });
-   
-</script>
+        main {
+            background-color: rgb(5, 0, 5);
+            color: rgb(249, 246, 249);
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 20px auto;
+            border: 5px solid rgb(46, 45, 45);
+            padding: 16px;
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+        img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+        }
+        .artigo-autor {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>tumbalacatubatumbata.</h1>
+        <p>venha comprar puro voodo.</p>
+    </header>
 
+    <!-- PRIMEIRO POST -->
+    <main>
+        <img src="https://gstatic.com" alt="ala, ta caçando oq">
+        <div>
+            <h2>ain ze da manga</h2>
+            <p>sei la.</p>
+            <p class="artigo-autor">Por: sixsevensito</p>
+            <button>6️⃣ <span>0</span></button>
+            <button>7️⃣ <span>0</span></button>
+        </div>
+    </main>
 
+    <!-- SEGUNDO POST -->
+    <main>
+        <"legal">
+        <img src="https://picsum.photos" alt="https://pin.it/KpLru8jNB">
+        <div>
+            <h2>tomanokulo</h2>
+            <p>Nao sei oq fala aq tbm desculpa fessora.</p>
+            <p class="artigo-autor">Por:lalalalala moto moto</p>
+            <button>👍 <span>0</span></button>
+            <button>❤️ <span>0</span></button>
+        </div>
+    </main>
+
+    <script>
+        const botoes = document.querySelectorAll("main button");
+        botoes.forEach(function (botao) {
+            botao.addEventListener("click", botaoClicado);
+            
+            function botaoClicado() {
+                console.log("fui clicado");
+                let texto = botao.querySelector("span");
+                texto.textContent = Number(texto.textContent) + 1;
+            }
+        });
+    </script>
+</body>
 </html>
